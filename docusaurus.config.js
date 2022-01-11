@@ -82,7 +82,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Digital Services Factory Team. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Digital Services Factory Team - Republic of Cyprus.`,
       },
       prism: {
         theme: lightCodeTheme,
