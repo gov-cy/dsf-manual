@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 
 slug: /ways-of-working/code-review
 ---

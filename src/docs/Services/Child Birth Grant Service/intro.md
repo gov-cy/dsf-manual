@@ -1,9 +1,10 @@
 ---
+sidebar_position: 4
 
 slug: /services/child-birth-grant
 ---
 
-# Introduction
+# History
 
 The child birth grant service is our first service. It is designed to be a workable proof of concept that allows us to validate our ways of working.
 

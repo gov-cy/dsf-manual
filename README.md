@@ -1,8 +1,8 @@
 # dsf-manual
 
-[Digital Services Factory Manual](https://gov-cy.github.io/dsf-manual/)
+[Digital Services Factory Team Manual](https://gov-cy.github.io/dsf-manual/)
 
-This repo is the manual for the Digital Services Factory. Initially tech focussed but potentially will include further team docs grow to include further documentation.
+This repo is the manual for the Digital Services Factory Team. Initially tech focussed but potentially will include further team docs grow to include further documentation.
 
 # Creating new pages
 
