@@ -20,14 +20,23 @@
   --ifm-navbar-link-color: rgb(255,255,255);
   --ifm-font-color-base: black;
   --ifm-menu-color-active:black;
-
+  --ifm-footer-padding-vertical: 1em;
+  --ifm-footer-padding-horizontal: 0;
+  --ifm-footer-padding-top: 10px;
 }
 
 .footer--dark {
   --ifm-footer-background-color: #EBF1F3;
-  --ifm-footer-color: black;
+  --ifm-footer-color: #31576F;
   --ifm-footer-link-color: black;
   --ifm-footer-title-color: black;
+  border-top: 8px solid !important;
+
+}
+
+.footer__copyright{
+  color:black;
+  text-align: left;
 }
 
 .footer__items {
