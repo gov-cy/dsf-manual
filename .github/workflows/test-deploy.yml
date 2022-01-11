@@ -1,0 +1,21 @@
+name: Test site can be built
+
+on:
+  pull_request:
+    branches: [main]
+    paths: [src/**,.github/workflows/test-deploy.yml]
+
+jobs:
+  test-deploy:
+    name: Test site can be built...
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: npm
+      - name: Test build
+        run: |
+          npm ci
+          npm run build
