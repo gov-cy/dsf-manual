@@ -8,22 +8,26 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Digital Services Factory Manual 😎',
   tagline: 'Cental doucmentation repository for everything relating to tech on the Digital Services Factory team',
-  url: 'https://gov-cy.github.io/dsf-manual',
-  baseUrl: '/',
+  url: 'https://gov-cy.github.io/',
+  baseUrl: '/dsf-manual/',
+  organizationName: 'gov-cy', // Usually your GitHub org/user name.
+  projectName: 'dsf-manual', // Usually your repo name.
+  deploymentBranch: 'deployed',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'gov-cy', // Usually your GitHub org/user name.
-  projectName: 'dsf-manual', // Usually your repo name.
+  staticDirectories: ['src/static'],
 
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        blog:false,
         docs: {
+          path:'src/docs',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: 'https://github.com/gov-cy/dsf-manual/tree/main/src/pages/',
         },
         theme: {
@@ -63,8 +67,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Home',
+                to: '/',
               },
             ],
           },
