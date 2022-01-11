@@ -3,34 +3,15 @@ sidebar_position: 1
 slug: /
 ---
 
-# Tutorial Intro
+# Digital Services Factory Team Manual
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+## What lives in the manual?
 
-Get started by **creating a new site**.
+This is designed to operate as a manual for the team to collect ways of working, useful links and historical information.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-## Generate a new site
+## How can I update the manual?
 
-Generate a new Docusaurus site using the **classic template**:
+The link below will take you to github where you can create markdown pages that will allow you to add new pages or edit the existing ones.
 
-```shell
-npm init docusaurus@latest my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.

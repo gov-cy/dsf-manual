@@ -1,4 +1,4 @@
-name: Build site & Update 'deployed' branch - /build directory & Deploy to Github Pages
+name: Build site, update 'deployed' branch, deploy to Github Pages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Build site & Update 'deployed' branch - /build directory & Deploy to Github Pages
+    name: Build site, update 'deployed' branch, deploy to Github Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,9 +26,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Build output to publish to the 'deployed' branch:
-          publish_branch: deployed
+          # We compiled the files into 'main' -> `/build` above so that is what we want to publish:
           publish_dir: ./build
+          # We want to publish to the 'deployed' branch:
+          publish_branch: deployed
           # Assign commit authorship to the official GH-Actions bot for deploys to `gh-pages` branch:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
           # The GH actions bot is used by default if you didn't specify the two fields.
