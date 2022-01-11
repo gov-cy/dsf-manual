@@ -27,8 +27,8 @@ const config = {
         docs: {
           path:'src/docs',
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/gov-cy/dsf-manual/tree/main/src/pages/',
+          sidebarPath: require.resolve('./src/js/sidebars.js'),
+          editUrl: 'https://github.com/gov-cy/dsf-manual/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
