@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Digital Services Factory Manual 😎',
   tagline: 'Cental doucmentation repository for everything relating to tech on the Digital Services Factory team',
-  url: 'https://gov-cy.github.io/',
-  baseUrl: '/dsf-manual/',
+  url: 'https://gov-cy.github.io/dsf-manual/',
+  baseUrl: '/',
   organizationName: 'gov-cy', // Usually your GitHub org/user name.
   projectName: 'dsf-manual', // Usually your repo name.
   deploymentBranch: 'deployed',
