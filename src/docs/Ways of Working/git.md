@@ -1,17 +1,18 @@
 ---
 sidebar_position: 4
-slug: /git-flow
+slug: /ways-of-working/git-flow
 ---
 
-# Git flow
+# Team's flow
 
 This document describes the Team's git wokflow. It is bases on the [GitHub workflow](https://docs.github.com/en/get-started/quickstart/github-flow).
 
 ## Prerequisites
 
-### Note.js
+###  (Recommended) Install node.js and git
 
-Install [Note.js](https://nodejs.org/en/download/)
+- Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- **If required** by the project Install [Note.js](https://nodejs.org/en/download/)
 
 ### Clone repository 
 
@@ -23,13 +24,13 @@ Install [Note.js](https://nodejs.org/en/download/)
 ### Install Dependencies
 
 **If required** by the project, update npm dependencies locally (on your computer)
-- **Command line**: `npm instal`
+- **Command line**: `npm install`
 
 ## Workflow
 
 ### 1. Create a branch
 
-Create a branch in your repository. Use your name initials and a short, descriptive branch name enables your collaborators to see ongoing work at a glance. For example, `CE-increase-test-timeout` or `NR-add-code-of-conduct`
+First you are going to need to create a branch in your repository. To do this you need to pick a name for your branch. Use your name initials and a short, descriptive branch name enables your collaborators to see ongoing work at a glance. For example, `CE-increase-test-timeout` or `NR-add-code-of-conduct`
 
 - Make sure you are in `main` branch and `pull` from remote. 
     - **command line**: `git pull`
@@ -86,9 +87,7 @@ After you merge your pull request, delete your branch. This indicates that the w
 - Protection rules for branch `main`
     - Require a pull request before merging
     - Require approvals
-- Github pages (if enabled) 
-    - branch `main`
-    - folder `docs`
+
 
 ## Github Various Commands
 
