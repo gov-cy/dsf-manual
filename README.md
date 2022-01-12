@@ -19,3 +19,6 @@ Or to put it another way the files in [github.com/gov-cy/dsf-manual/tree/main/sr
 
 The root directory of the `'deployed'` branch is what is shown at [https://gov-cy.github.io/dsf-manual/](https://gov-cy.github.io/dsf-manual/)
 
+# Styling
+
+All the styling changes so far are applied through the `/src/css/custom.css` file and apply tweaks to the Docusaurus 'classic' theme. There is probably a nicer way to do this but for now that's how changes have been applied.
