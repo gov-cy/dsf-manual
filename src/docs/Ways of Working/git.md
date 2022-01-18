@@ -64,6 +64,7 @@ Changes are done now in remote repository. Next step you need to create a pull r
 ### 4. Review and Approve Pull Request
 
 - Another member team needs to review and `approve` the pull request on github. Use meaningful comments on review.
+    - Check [Visual Review with Percy](percy#github-review-builds)
 
 ### 5. Merge
 
