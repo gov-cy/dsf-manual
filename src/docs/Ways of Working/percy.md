@@ -45,7 +45,11 @@ This document describes how you can setup a Percy project, connect it with a Git
 
 4. Create npm test script 
     - In this step you will need to create a test script that will be used to generate the screenshots and add them to Percy. Depending on the technology used (such as Ember, Cypress, Capybara, Storybook e.t.c) Percy has *how to* tutorials at https://docs.percy.io/docs/example-apps. In this tutorial we are using [PercyScript](https://docs.percy.io/docs/percyscript) which uses the `@percy/script` npm package.
-    - Create a test script under `test\scripts\percy.js`. See below a sample test script
+    - Create a test script under `test\scripts\percy.js`. 
+    
+      Use the `page.goto(URL)` and `percySnapshot(snapshotName, [options])` methods to navidate to a page and take snapshots. 
+    
+      See below a sample test script.
 
 ```js 
 const PercyScript = require('@percy/script');
@@ -61,8 +65,13 @@ PercyScript.run(async (page, percySnapshot) => {
 
   console.log(`Server started at ${TEST_URL}`);
 
+  // Take snapshoots on TEST_URL page
   await page.goto(TEST_URL);
   await percySnapshot('index',{ widths: [375, 767, 1280] });
+
+  // Take snapshoots of another page
+  await page.goto(TEST_URL + '/my-cool-new-page');
+  await percySnapshot('Cool New Page',{ widths: [375, 767, 1280] });
 
   server.close();
 });
@@ -139,7 +148,7 @@ Approving a build in Percy sets the Percy status in GitHub to green/successful, 
 
 To add a comment and start a comment thread, select the icon in the snapshot header.
 
-![Percy comments](../assets/percy8.png)
+![Percy comments](../assets/percy12.png)
 
 ### Changes requested workflow
 
