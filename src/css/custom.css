@@ -58,3 +58,18 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+.container a {
+  color: #1d70b8;
+  text-decoration: underline;
+}
+.container a:hover {
+  color: #003078;
+}
+.container a:visited {
+  color: #4c2c92;
+  border-color: #4c2c92;
+}
+.container a:active {
+  color: #272525;
+  border-color: #272525;
+}
