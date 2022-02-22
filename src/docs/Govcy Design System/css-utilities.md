@@ -57,7 +57,14 @@ The following utility classes have been created and can be used to build the GOV
 |**govcy-valign**| `govcy-valign-*`|Change the vertical alignment of an inline, inline-block or table-cell box in an element.<br /><br /> * can have values `baseline`,`top`, `middle`, `bottom`, `text-bottom`, `text-top` |`<div class="govcy-valign-top"></div>` <br /><br /> `<div class="govcy-valign-middle"></div>`|
 |**govcy-float**| `govcy-float-*`|Change an element floats.<br /><br /> * can have values `left`,`right`, `none` |`<div class="govcy-float-left"></div>`|
 |**govcy-overflow**| `govcy-overflow-*`|Change what should happen if content overflows an element's box.<br /><br /> * can have values `auto`,`hidden`, `visible`, `scroll` |`<div class="govcy-overflow-auto"></div>`|
+
+## Display
+
+| Utility      | Usage      | Description | Example|
+| -------------| ---------- | ----------- |---------|
 |**govcy-display**| `govcy-d-*`|Change the display behavior of an element.<br /><br /> * can have values `inline`, `inline-block`, `block`, `grid`, `table`, `table-row`, `table-cell`, `flex`, `inline-flex`, `none` |`<div class="govcy-d-none"></div>`|
+|**govcy-display-{sm,md,lg,xl,xxl}**| `govcy-d-*`|Change the display behavior of an element for any responsive screen variation..<br /><br /> * can have values `inline`, `inline-block`, `block`, `grid`, `table`, `table-row`, `table-cell`, `flex`, `inline-flex`, `none` |`<div class="govcy-d-md-none"></div>`|
+|**govcy-display-print**| `govcy-d-print-*`|Change the display behavior of an element when printing.<br /><br /> * can have values `inline`, `inline-block`, `block`, `grid`, `table`, `table-row`, `table-cell`, `flex`, `inline-flex`, `none` |`<div class="govcy-d-print-none"></div>`|
 
 ## Flex
 
@@ -122,4 +129,11 @@ The following utility classes have been created and can be used to build the GOV
 <div class="govcy-br-5 govcy-br-primary govcy-rounded-right-3">Right</div>
 <div class="govcy-br-5 govcy-br-primary govcy-rounded-bottom-3">Bottom</div>
 <div class="govcy-br-5 govcy-br-primary govcy-rounded-left">Left</div>
+
+<div class="govcy-d-lg-none">hide on lg and wider screens</div>
+<div class="govcy-d-none govcy-d-lg-block">hide on screens smaller than lg</div>
+
+<div class="govcy-d-print-none">Screen Only (Hide on print only)</div>
+<div class="govcy-d-none govcy-d-print-block">Print Only (Hide on screen only)</div>
+<div class="govcy-d-none govcy-d-lg-block govcy-d-print-block">Hide up to large on screen, but always show on print</div>
 ```
