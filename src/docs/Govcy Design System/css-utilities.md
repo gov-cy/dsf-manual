@@ -55,7 +55,7 @@ The following utility classes have been created and can be used to build the GOV
 | Utility      | Usage      | Description | Example|
 | -------------| ---------- | ----------- |---------|
 |**govcy-valign**| `govcy-valign-*`|Change the vertical alignment of an inline, inline-block or table-cell box in an element.<br /><br /> * can have values `baseline`,`top`, `middle`, `bottom`, `text-bottom`, `text-top` |`<div class="govcy-valign-top"></div>` <br /><br /> `<div class="govcy-valign-middle"></div>`|
-|**govcy-float**| `govcy-float-*`|Change an element floats.<br /><br /> * can have values `left`,`right`, `none` |`<div class="govcy-float-left"></div>`|
+|**govcy-float**| `govcy-float-*`|Change an element floats.<br /><br /> * can have values `start`,`end`, `none` |`<div class="govcy-float-start"></div>`|
 |**govcy-overflow**| `govcy-overflow-*`|Change what should happen if content overflows an element's box.<br /><br /> * can have values `auto`,`hidden`, `visible`, `scroll` |`<div class="govcy-overflow-auto"></div>`|
 
 ## Display
