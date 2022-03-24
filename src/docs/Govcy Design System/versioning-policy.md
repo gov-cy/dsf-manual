@@ -41,12 +41,13 @@ Read more on the versioning specification at https://semver.org/#semantic-versio
 - 2.2.4 2.x.x_latest
 
 ## When to assign new version number
-A new version number should be assigned on each merge to the main branch.
+A new version number should be assigned on each merge to the main branch and there is a change in the `dist` folder.
 
 ## Versioning Processes
 Do the following whenever a new version is assigned:
 
-1. Change the version number in the **package.json** file as shown in the sample below
+### 1. Change Version
+ Change the version number in the **package.json** file as shown in the sample below
 
 ```json
 {
@@ -55,7 +56,8 @@ Do the following whenever a new version is assigned:
     .....
 ```
 
-2. Update the **changelog.md**
+### 2. Change log
+Update the **changelog.md**
 
 When updating the change log, make it easier for developers and contributors to see precisely what notable changes have been made between each release (or version) of the project. Remember the change log is intended for humans :-). 
 
@@ -90,18 +92,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial commit after applying Semantic Versioning
 ```
 
-3. Make a **tag** on Git (support latest major version)
-Make sure you are on `master` branch and run the following:
+### 3. Tagging and Publishing
+A github action will  `Tagging` and `Publishing`
+If the following conditions are met the `Tag and Publish on Version Change` action will be triggered on Github:
+- There is a change on **package.json** file `version` attribute (as described on step 1).
+- There is a change in the **dist** folder
 
+The action will then do the following:
+
+- Makes **tags** on Git (support latest major version) for **latest** and **X.X.X** 
+This would be the equivalent of running the following from the `master`:
 ```bash
 git pull
 git tag v0.2.3
 git push origin --tags
 ```
 
-4. **Publish** the new version on the CDN server . Keep CDN entries for every version AND latest for every Major version. 
+- **Publishes** the new versions on the CDN server for **latest** and **X.X.X** in the following URLs:
+  - `https://govcydesignsystem1.azureedge.net/bvtest/version/X.X.X/style.min.css`
+  - `https://govcydesignsystem1.azureedge.net/bvtest/version/latest/style.min.css`
 
-5. **Inform** developers and collaborators about the new version. 
+### 4. Inform
+**Inform** developers and collaborators about the new version. . 
 
 - Keep a list of developers so that they can be informed via a newsletter about the new version. 
 Suggest that it is strongly suggested that they use the latest Major version and always do visual tests.
