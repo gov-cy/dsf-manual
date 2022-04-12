@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 slug: /govcy-design-system/versioning-policy
 ---
 
@@ -118,5 +118,3 @@ git push origin --tags
 - Keep a list of developers so that they can be informed via a newsletter about the new version. 
 Suggest that it is strongly suggested that they use the latest Major version and always do visual tests.
 - Announce the new version in the `daily stand-up` and in the `tech-talk` channel in discord. 
-
-
