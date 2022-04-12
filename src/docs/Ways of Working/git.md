@@ -169,9 +169,11 @@ the changes from main
 
 All you need to do now is to get test.txt how you want it then:
 
-`git add test.txt`
-`git commit -m 'Resolving conflict in test.txt' test.txt`
-`git rebase --continue`
+```
+git add test.txt
+git commit -m 'Resolving conflict in test.txt' test.txt
+git rebase --continue
+```
 
 Done!
 
