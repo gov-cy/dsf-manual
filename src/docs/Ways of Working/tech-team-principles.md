@@ -10,7 +10,7 @@ The DSF Priciples, described below, are a set of criteria to help government des
 
 ### Check out the real principles document on our [dedicated page](https://gov-cy.github.io/dsf-principles/)
 
-## The Principles
+## The Tech Team's Principles
 
 1. Same look and feel over all gov’t e-services
 2. Perform initial production deployment and retain visibility of subsequent production deployments

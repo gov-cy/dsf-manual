@@ -1,0 +1,1 @@
+## Placeholder to document our policies and practices around secrets management
