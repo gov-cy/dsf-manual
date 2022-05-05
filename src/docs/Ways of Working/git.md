@@ -98,8 +98,87 @@ After you merge your pull request, delete your branch. This indicates that the w
 - `git branch` To see local branches
 - `git branch -d <branch-name> ` To delete local branch. If the branch contains unmerged changes, though, Git will refuse to delete it. If you’re sure you want to do it, you’ll have to force the deletion by replacing the -d parameter with an uppercase D
 
+## Rebasing and Conflicts
+### Rebasing
 
+Remember to think about a git repository as a _series of changes_.
 
+When you create a new branch git makes a copy of 'main' and you start putting changes on top of it.
 
+But what if someone else puts more changes onto 'main'? The copy of main you are putting changes on top of is out of date.
 
+To update the copy of main that is underneath our changes we perform a rebase.
 
+First we update out main locally as usual:
+
+```
+git checkout main
+git pull
+```
+
+then we go to our branch and rebase:
+
+```
+git checkout my-cool-branch
+git rebase main
+```
+
+Done!
+
+---
+**NOTE**
+For more information check this [guide from Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+---
+### Conflicts
+
+But...
+
+Sometimes there will be conflicts with you changes and the new changes in main. **Don't Panic.**
+
+You should get a message like this:
+
+```
+You have unmerged paths.
+(fix conflicts and run "git commit")
+(use "git rebase --abort" to abort the rebase)
+
+Unmerged paths:
+(use "git add <file>..." to mark resolution)
+
+both modified:   test.txt
+```
+
+The first thing this tells you is you can always cancel the rebase. If you run `git rebase --abort` you will be back with your branch before you tried to rebase the changes from main.
+
+It also tells you how to fix the problem:
+
+```
+> both modified:   test.txt
+> use "git add <file>..." to mark resolution
+> fix conflicts and run "git commit"
+```
+
+In our example the file with a conflict is `test.txt`. In that file you will see more info:
+
+```
+$ cat test.txt
+<<<<<<< HEAD
+the changes from my branch
+=======
+the changes from main
+>>>>>>> main
+```
+
+All you need to do now is to get test.txt how you want it then:
+
+```
+git add test.txt
+git commit -m 'Resolving conflict in test.txt' test.txt
+git rebase --continue
+```
+
+Done!
+
+**NOTE**
+For more information check this [guide from Atlassian](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+---
