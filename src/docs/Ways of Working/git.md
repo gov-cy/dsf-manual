@@ -152,9 +152,11 @@ The first thing this tells you is you can always cancel the rebase. If you run `
 
 It also tells you how to fix the problem:
 
+```
 > both modified:   test.txt
 > use "git add <file>..." to mark resolution
 > fix conflicts and run "git commit"
+```
 
 In our example the file with a conflict is `test.txt`. In that file you will see more info:
 
