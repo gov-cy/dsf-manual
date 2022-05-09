@@ -14,16 +14,16 @@ from databases, APIs etc. That type of testing is called Integration Testing (I&
 
 ```
     [Fact]
-    public void ResponseError_Check_Wether_h1_Exists()
+    public void GovCy_Button_Check_Functionality()
     {
-        var ctx = new TestContext();
-        ctx.Services.AddLocalization();
-        var cut = ctx.Render(@<ResponseError></ResponseError>);
+        using var ctx = new TestContext();
+        var cut = ctx.Render(@<Govcy_Button ButtonTetxt = "Press" ButtonType = "submit" />
 
-        var h1 = cut.FindAll("h1");
-        Assert.Equal(1, h1.Count);
-        
+    );
+        var buttonElement = cut.Find("button");
+        Assert.Equal(1, cut.RenderCount);
     }
+
 ```
 The above test ensures that the button element in the DSF made Blazor component <GovCy_Button>  is indeed  a submit button. This makes sure that in future when a developer either by accident or by design changes the button type, the change will be documented as the UT will flag this as a failed test. 
 Another example of UT is shown below:  
