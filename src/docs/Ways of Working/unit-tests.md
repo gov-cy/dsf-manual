@@ -5,7 +5,7 @@ slug: /ways-of-working/unit-tests
 
 
 
-# UNIT TESTING - A SHORT GUIDE  
+# Unit Testing - A Short Guide!
 
 Unit testing (UT) involves the development of the smallest possible tests which eventually ensure the integrity of the SUT 
 (System Under Test). For example tests include checking that the produced html is the expected one or ensuring that τhe 
@@ -69,10 +69,29 @@ Here we are mocking the behavior of an HttpClient API call.  This is essential s
 DSF has setup the UT infrastructure as found in the updated solution structure in GitHub (govcy-blazor-repo). Unit tests are developed in a separate project in the same solution as the SUT in Visual Studio or VS Code.  
 The following frameworks were used to develop the UT infrastructure:
 
+## Important Dependencies
 
 1. **BUnit** – A framework specifically designed for the .net Blazor framework. 
 2. **XUnit** – A base testing framework required for BUnit to work.
-3. **FakeItEasy**– A mocking framework to mock services like http calls, browser storage etc.
+3. **FakeItEasy** – A mocking framework to mock services like http calls, browser storage etc.
+4. **Moq** - A [popular dotnet mocking framework](https://github.com/moq/moq4)
+4. **HTTPMock** - A [lightweight mocking frameworks](https://github.com/richardszalay/mockhttp) specifically for HTTPClient mocks.
 
 It is emphasized here that UT will be written by the developer each time a change is made in the application. It has been agreed that the developer implementing the change in the application will be also responsible implementing the UT.
 
+## Targeting a single test
+
+Sometimes you might want to run all of the unit tests and you can do that with `dotnet test`.
+Other times it's better/ faster to target just a single test:
+
+You can get the 'FullyQualifiedName' of a test by using:
+
+```
+dotnet list-tests
+```
+
+Then you can target a single test with (for example):
+
+```
+dotnet test --filter "FullyQualifiedName=TestIbanService.TestIbanService.TestIbanServiceInvalidIban"
+```
