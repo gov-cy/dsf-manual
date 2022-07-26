@@ -21,4 +21,4 @@ The root directory of the `'deployed'` branch is what is shown at [https://gov-c
 
 # Styling
 
-All the styling changes so far are applied through the `/src/css/custom.css` file and apply tweaks to the Docusaurus 'classic' theme. There is probably a nicer way to do this but for now that's how changes have been applied.
+All the styling changes so far are applied through the `/src/css/custom.css` file and apply tweaks to the Docusaurus 'classic' theme. There is probably a nicer way to do this but for now that's how changes have been applied. 
